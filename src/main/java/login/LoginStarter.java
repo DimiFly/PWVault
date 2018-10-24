@@ -19,10 +19,7 @@ public class LoginStarter extends Application {
 
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("gui/PWVaultGui.fxml"));
-
-
         Scene scene = new Scene(root);
-
         stage.setScene(scene);
         stage.show();
     }

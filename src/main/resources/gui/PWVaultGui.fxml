@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="350.0" style="-fx-background-image: resources\images\PWVaultBackgroundHoch.png;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+<GridPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="350.0" stylesheets="@../stylesheets/loginStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="333.3333333333" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="333.3333333333" />
@@ -23,7 +24,7 @@
       <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="PWVault" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+      <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="PWVault" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
          <font>
             <Font name="DejaVu Sans Bold" size="50.0" />
          </font>
@@ -39,7 +40,7 @@
             <Font size="15.0" />
          </font>
       </TextField>
-      <Label text="Username" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+      <Label text="Username" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
          <font>
             <Font name="DejaVu Sans Bold" size="30.0" />
          </font>
@@ -47,7 +48,7 @@
             <Insets top="20.0" />
          </GridPane.margin>
       </Label>
-      <Label text="Password" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+      <Label text="Password" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
          <font>
             <Font name="DejaVu Sans Bold" size="30.0" />
          </font>
@@ -68,7 +69,7 @@
             <Font name="DejaVu Sans Bold" size="20.0" />
          </font>
       </Button>
-      <Button mnemonicParsing="false" text="+" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+      <Button id="addButton" mnemonicParsing="false" stylesheets="@../stylesheets/loginStyle.css" text="+" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
          <font>
             <Font name="DejaVu Sans Bold" size="20.0" />
          </font>
