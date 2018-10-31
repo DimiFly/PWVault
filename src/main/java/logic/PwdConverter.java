@@ -23,8 +23,7 @@ public class PwdConverter {
             MessageDigest md = MessageDigest.getInstance("md5");
             md.update(pwd.getBytes());
             byte[] digest = md.digest();
-
-            printHex(digest);
+            return new String(digest);
 
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
