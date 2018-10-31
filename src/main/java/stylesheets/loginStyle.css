@@ -21,5 +21,9 @@
     -fx-border-radius: 20px;
     -fx-border-width: 5px;
     -fx-pref-width: 160px;
-
+}
+#loginButton:hover{
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-color-label-visible: black ;
 }
