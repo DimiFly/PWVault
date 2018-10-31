@@ -14,19 +14,18 @@ import javafx.stage.Stage;
 /**
  * @author 5im16diwehrli
  */
-public class LoginStarter extends Application {
+public class MainFrameStarter extends Application {
 
 
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("gui/FXMLDocumentLogIn.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("gui/FXMLDocumentMainFrame.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setMaxHeight(505);
+        /*stage.setMaxHeight(505);
         stage.setMinHeight(505);
         stage.setMaxWidth(350);
-        stage.setMinWidth(350);
+        stage.setMinWidth(350);*/
         stage.show();
-
     }
 
     /**

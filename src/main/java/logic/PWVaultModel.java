@@ -5,10 +5,7 @@
  */
 package logic;
 
-import java.util.ArrayList;
-
 /**
- *
  * @author 5im16nivanderheide
  */
 public class PWVaultModel {
@@ -17,6 +14,7 @@ public class PWVaultModel {
     private TextManager textManager;
     private User currentuser; 
 
+
     public PWVaultModel() {
         pwdConverter = new PwdConverter();
         textManager = new TextManager();
@@ -24,7 +22,9 @@ public class PWVaultModel {
 
     public boolean loginUser(String username, String pwd) {
         if (textManager.userExists(username)) {
+
             if (pwdConverter.hashUserPwd(pwd).equals(textManager.getPwdOfUser(username))) {
+
                 System.out.println("User: " + username + " loged in!");
                 return true;
             } else {
@@ -43,5 +43,5 @@ public class PWVaultModel {
             System.out.println("User" + username + " already exists!");
         }
     }
-
 }
+
