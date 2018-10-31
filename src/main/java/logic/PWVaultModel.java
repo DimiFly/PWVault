@@ -23,15 +23,27 @@ public class PWVaultModel {
     public boolean loginUser(String username, String pwd){
         if(textManager.userExists(username)){
             if(pwdConverter.hashPwd(pwd).equals(textManager.getPwdOfUser(username))){
-                System.out.println("User: " + username + "loged in!");
+                System.out.println("User: " + username + " loged in!");
                 return true;
             }else{
                 System.out.println("wrong password");
             }
         }else{
-            System.out.println("User: " + username + "doesn't exist!");
+            System.out.println("User: " + username + " doesn't exist!");
         }
         return false;
     }
+    
+    public void addUser(String username, String pwd){
+        if(!textManager.userExists(username)){
+            textManager.addUser(username, pwdConverter.hashPwd(pwd));
+        }else{
+            System.out.println("User"+ username +" already exists!");
+        }
+    }
+    
+    public ArrayList<>{
+    
+}
     
 }

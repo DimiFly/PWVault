@@ -30,6 +30,7 @@ public class LoginController implements Initializable {
         //TODO
     }
 
+    @FXML
     private void handleButtonAdd(ActionEvent event){
         //TODO
     }
