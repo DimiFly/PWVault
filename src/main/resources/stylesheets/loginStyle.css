@@ -1,5 +1,5 @@
 #background{
-    -fx-background-image: url("../../resources/images/BackgroundHoch.png");
+    -fx-background-image: url("../images/BackgroundHoch.png");
     -fx-background-repeat: stretch;
     -fx-background-size: 900 506;
     -fx-background-position: center center;
@@ -15,7 +15,7 @@
 }
 
 #loginButton{
-    -fx-background-radius: 20px;
+    -fx-background-radius: 30px;
     -fx-background-color: transparent;
     -fx-border-color: white;
     -fx-border-radius: 20px;
@@ -25,5 +25,5 @@
 #loginButton:hover{
     -fx-background-color: white;
     -fx-border-color: black;
-    -fx-color-label-visible: black ;
+    -fx-text-fill: black;
 }

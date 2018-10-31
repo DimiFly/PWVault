@@ -22,29 +22,16 @@ import javafx.scene.control.TextField;
  */
 public class LoginController implements Initializable {
 
-    private DecimalFormat df = new DecimalFormat("#.0");
     @FXML
-    private Label output;
-    @FXML
-    private TextField gewicht, groesse;
-
-    private Double bmi;
+    private TextField username, password;
 
     @FXML
     private void handleButtonCalculate(ActionEvent event) {
+        //TODO
+    }
 
-        Double weight = Double.parseDouble(gewicht.getText());
-        Double height = Double.parseDouble(groesse.getText());
-        bmi = weight / (height * height);
-        output.setText(df.format(bmi));
-        if (bmi > 18.5 && bmi < 30) {
-            output.setStyle("-fx-background-color: green;");
-        }else if(bmi > 16.5 && bmi < 18.6 || bmi > 29.9 && bmi < 32.1){
-            output.setStyle("-fx-background-color: orange;");
-        }else{
-            output.setStyle("-fx-background-color: red;");
-        }
-
+    private void handleButtonAdd(ActionEvent event){
+        //TODO
     }
 
     @Override
