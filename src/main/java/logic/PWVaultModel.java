@@ -43,7 +43,5 @@ public class PWVaultModel {
             System.out.println("User" + username + " already exists!");
         }
     }
-    
-    
-    
+
 }
