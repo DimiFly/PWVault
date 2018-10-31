@@ -5,8 +5,16 @@
  */
 package logic;
 
+import java.security.InvalidKeyException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.SecretKeySpec;
 
 /**
  *
@@ -18,7 +26,7 @@ public class PwdConverter {
 
     }
 
-    public String hashPwd(String pwd) {
+    public String hashUserPwd(String pwd) {
         try {
             MessageDigest md = MessageDigest.getInstance("md5");
             md.update(pwd.getBytes());
@@ -41,6 +49,54 @@ public class PwdConverter {
             output += nextByte;
         }
         return output;
+    }
+
+    public String encryptPwd(String pwd, String key) {
+        byte[] keyArray = key.getBytes();
+        byte[] dataToSend = pwd.getBytes();
+        Cipher c;
+        try {
+            c = Cipher.getInstance("AES");
+            SecretKeySpec k = new SecretKeySpec(keyArray, "AES");
+            c.init(Cipher.ENCRYPT_MODE, k);
+            byte[] encryptedData = c.doFinal(dataToSend);
+            return new String(encryptedData);
+        } catch (NoSuchAlgorithmException ex) {
+            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NoSuchPaddingException ex) {
+            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InvalidKeyException ex) {
+            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalBlockSizeException ex) {
+            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (BadPaddingException ex) {
+            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
+    public String decryptPwd(String pwd, String key) {
+        byte[] keyArray = key.getBytes();
+        byte[] encryptedData = pwd.getBytes();
+        Cipher c;
+        try {
+            c = Cipher.getInstance("AES");SecretKeySpec k
+                = new SecretKeySpec(keyArray, "AES");
+        c.init(Cipher.DECRYPT_MODE, k);
+        byte[] data = c.doFinal(encryptedData);
+        return new String(data);
+        } catch (NoSuchAlgorithmException ex) {
+            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NoSuchPaddingException ex) {
+            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InvalidKeyException ex) {
+            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalBlockSizeException ex) {
+            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (BadPaddingException ex) {
+            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }
 
 }
