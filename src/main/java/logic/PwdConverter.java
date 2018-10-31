@@ -23,13 +23,24 @@ public class PwdConverter {
             MessageDigest md = MessageDigest.getInstance("md5");
             md.update(pwd.getBytes());
             byte[] digest = md.digest();
-            return new String(digest);
+            return byteToHex(digest);
 
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
-
         return "";
+    }
+
+    public String byteToHex(byte[] buffer) {
+        String output = "";
+        for (byte d : buffer) {
+            String nextByte = Integer.toHexString(d & 0xFF).toLowerCase();
+            if (nextByte.length() < 2) {
+                nextByte = "0" + nextByte;
+            }
+            output += nextByte;
+        }
+        return output;
     }
 
 }
