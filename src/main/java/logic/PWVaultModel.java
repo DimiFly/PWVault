@@ -6,44 +6,41 @@
 package logic;
 
 /**
- *
  * @author 5im16nivanderheide
  */
 public class PWVaultModel {
-    
+
     private PwdConverter pwdConverter;
     private TextManager textManager;
     private User currentuser;
-    
-    public PWVaultModel(){
+
+    public PWVaultModel() {
         pwdConverter = new PwdConverter();
-        textManager = new TextManager();        
+        textManager = new TextManager();
     }
-    
-    public boolean loginUser(String username, String pwd){
-        if(textManager.userExists(username)){
-            if(pwdConverter.hashPwd(pwd).equals(textManager.getPwdOfUser(username))){
+
+    public boolean loginUser(String username, String pwd) {
+        if (textManager.userExists(username)) {
+            if (pwdConverter.hashPwd(pwd).equals(textManager.getPwdOfUser(username))) {
                 System.out.println("User: " + username + " loged in!");
                 return true;
-            }else{
+            } else {
                 System.out.println("wrong password");
             }
-        }else{
+        } else {
             System.out.println("User: " + username + " doesn't exist!");
         }
         return false;
     }
-    
-    public void addUser(String username, String pwd){
-        if(!textManager.userExists(username)){
+
+    public void addUser(String username, String pwd) {
+        if (!textManager.userExists(username)) {
             textManager.addUser(username, pwdConverter.hashPwd(pwd));
-        }else{
-            System.out.println("User"+ username +" already exists!");
+        } else {
+            System.out.println("User" + username + " already exists!");
         }
     }
-    
-    public ArrayList<>{
-    
+
+
 }
-    
-}
+
