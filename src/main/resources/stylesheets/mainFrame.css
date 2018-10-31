@@ -4,3 +4,16 @@
     -fx-background-size: 900 506;
     -fx-background-position: center center;
 }
+
+#addButton{
+    -fx-background-radius: 30px;
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-radius: 30px;
+    -fx-border-width: 5px;
+}
+
+#addButton:hover{
+    -fx-background-color: rgba(0,0,0,0.4);
+    -fx-border-color: rgba(0,0,0,0.5);
+}
