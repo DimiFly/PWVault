@@ -19,20 +19,20 @@ import java.util.logging.Logger;
  * @author 5im16nivanderheide
  */
 public class TextManager {
-    
+
     BufferedReader userReader;
     FileWriter userWriter;
     BufferedReader pwdReader;
     FileWriter pwdWriter;
-    
-    public TextManager(){
+
+    public TextManager() {
         try {
             userWriter = new FileWriter("/src/main/resources/text/user.txt");
             pwdWriter = new FileWriter("/src/main/resources/text/pwds.txt");
         } catch (IOException ex) {
             Logger.getLogger(TextManager.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         FileReader userfr = null;
         FileReader pwdfr = null;
         try {
@@ -42,53 +42,53 @@ public class TextManager {
             userReader = new BufferedReader(pwdfr);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TextManager.class.getName()).log(Level.SEVERE, null, ex);
-        }    
+        }
     }
-    
-    public boolean userExists(String username){
+
+    public boolean userExists(String username) {
         String line = "";
         try {
-            while((line = userReader.readLine()) != null){
-                if(line.split("|")[0].equals(username)){
+            while ((line = userReader.readLine()) != null) {
+                if (line.split("|")[0].equals(username)) {
                     return true;
                 }
             }
         } catch (IOException ex) {
             Logger.getLogger(TextManager.class.getName()).log(Level.SEVERE, null, ex);
-        }       
+        }
         return false;
     }
-    
-    public String getPwdOfUser(String username){
+
+    public String getPwdOfUser(String username) {
         String line = "";
         try {
-            while((line = userReader.readLine()) != null){
-                if(line.split("|")[0].equals(username)){
+            while ((line = userReader.readLine()) != null) {
+                if (line.split("|")[0].equals(username)) {
                     return line.split("|")[1];
                 }
             }
         } catch (IOException ex) {
             Logger.getLogger(TextManager.class.getName()).log(Level.SEVERE, null, ex);
-        }          
+        }
         return "";
     }
-    
-    public void addUser(String username, String pwd){
+
+    public void addUser(String username, String pwd) {
         try {
-            userWriter.write(username+"|"+pwd);
+            userWriter.write(username + "|" + pwd);
             userWriter.flush();
         } catch (IOException ex) {
             Logger.getLogger(TextManager.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
     public ArrayList<String> getCategorysOfUser(String username) {
-        if(userExists(username)){
+        if (userExists(username)) {
             ArrayList<String> categorys = new ArrayList<String>();
             String line = "";
             try {
-                while((line = pwdReader.readLine()) != null){
-                    if(line.split("|")[0].equals(username)){
+                while ((line = pwdReader.readLine()) != null) {
+                    if (line.split("|")[0].equals(username)) {
                         categorys.add(line.split("|")[1]);
                     }
                 }
@@ -99,5 +99,28 @@ public class TextManager {
         }
         return null;
     }
-   
+
+    public String getPwdOfCathegoryOfUser(String username, String category, String key) {
+        try {
+            String line = "";
+            while ((line = pwdReader.readLine()) != null) {
+                if (line.split("|")[0].equals(username) && line.split("|")[1].equals(category)) {
+                    return line.split("|")[2];
+                }
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(TextManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return "";
+    }
+
+    public void addCategoryToUser(String username, String category, String pwd) {
+        try {
+            pwdWriter.write(username+"|"+category+"|"+pwd);
+            pwdWriter.flush();
+        } catch (IOException ex) {
+            Logger.getLogger(TextManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
 }
