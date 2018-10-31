@@ -3,17 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package login;
+package controller;
 
-import java.awt.Color;
 import java.net.URL;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 /**
@@ -21,7 +17,7 @@ import javafx.scene.control.TextField;
  * @author 5im16diwehrli
  */
 public class LoginController implements Initializable {
-    
+
     @FXML
     private TextField username, password;
 

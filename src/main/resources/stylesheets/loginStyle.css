@@ -6,12 +6,18 @@
 }
 
 #addButton{
-    -fx-background-radius: 20px;
+    -fx-background-radius: 30px;
     -fx-background-color: transparent;
     -fx-border-color: white;
     -fx-border-radius: 20px;
     -fx-border-width: 5px;
     -fx-pref-width: 500px;
+}
+
+#addButton:hover{
+    -fx-background-color: black;
+    -fx-border-color: black;
+    -fx-text-fill: white;
 }
 
 #loginButton{
@@ -23,7 +29,7 @@
     -fx-pref-width: 160px;
 }
 #loginButton:hover{
-    -fx-background-color: white;
+    -fx-background-color: black;
     -fx-border-color: black;
-    -fx-text-fill: black;
+    -fx-text-fill: white;
 }
