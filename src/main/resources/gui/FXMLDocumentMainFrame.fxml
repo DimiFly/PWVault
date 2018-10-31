@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.web.*?>
 <?import java.lang.*?>
@@ -8,16 +9,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="607.0" stylesheets="@../stylesheets/mainFrame.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+<GridPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@../stylesheets/mainFrame.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
   <rowConstraints>
+    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" text="PWVault" textFill="WHITE" GridPane.columnIndex="1">
@@ -25,5 +28,27 @@
             <Font name="DejaVu Sans Bold" size="50.0" />
          </font>
       </Label>
+      <TextField fx:id="username" prefHeight="25.0" prefWidth="883.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label text="Masterkey:" textFill="WHITE" GridPane.rowIndex="1">
+         <font>
+            <Font name="DejaVu Sans Bold" size="30.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin>
+      </Label>
+      <MenuButton alignment="CENTER" contentDisplay="CENTER" graphicTextGap="30.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="39.0" prefWidth="331.0" text="MenuButton" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+         <font>
+            <Font name="DejaVu Sans Bold" size="20.0" />
+         </font>
+      </MenuButton>
    </children>
 </GridPane>
