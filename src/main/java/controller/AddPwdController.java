@@ -10,20 +10,16 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TextField;
 import logic.PWVaultModel;
+
 
 /**
  *
  * @author 5im16diwehrli
  */
-public class LoginController implements Initializable {
-
-    private PWVaultModel model;
+public class AddPwdController implements Initializable {
     
-    @FXML
-    private TextField username, password;
-
+    private PWVaultModel model;
 
     @FXML
     private void handleButtonCalculate(ActionEvent event) {
@@ -35,9 +31,11 @@ public class LoginController implements Initializable {
         //TODO
     }
 
+
+
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize(URL location, ResourceBundle resources) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

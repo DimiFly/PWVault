@@ -12,12 +12,15 @@ import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import logic.PWVaultModel;
 
 /**
  *
  * @author 5im16diwehrli
  */
 public class MainFrameController implements Initializable {
+    
+    private PWVaultModel model;
 
     @FXML
     private TextField username, password;

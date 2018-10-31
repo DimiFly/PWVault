@@ -62,6 +62,7 @@ public class PWVaultModel {
         textManager.addCategoryToUser(currentUser.getUsername(), category, pwdConverter.encryptPwd(pwd, key));
         
     }
+    
     /////////////////////////////////// Maneframe
     
     public String getPwdOfCategory(String category, String key){
