@@ -27,8 +27,8 @@ public class TextManager {
 
     public TextManager() {
         try {
-            userWriter = new FileWriter("../../src/main/resources/text/user.txt");
-            pwdWriter = new FileWriter("../../src/main/resources/text/pwds.txt");
+            userWriter = new FileWriter("E:\\PWVault\\PWVault\\src\\main\\resources\\text\\user.txt");
+            pwdWriter = new FileWriter("E:\\PWVault\\PWVault\\src\\main\\resources\\text\\pwds.txt");
         } catch (IOException ex) {
             Logger.getLogger(TextManager.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -36,9 +36,9 @@ public class TextManager {
         FileReader userfr = null;
         FileReader pwdfr = null;
         try {
-            userfr = new FileReader("/src/main/resources/text/user.txt");
+            userfr = new FileReader("E:\\PWVault\\PWVault\\src\\main\\resources\\text\\user.txt");
             userReader = new BufferedReader(userfr);
-            pwdfr = new FileReader("/src/main/resources/text/pwds.txt");
+            pwdfr = new FileReader("E:\\PWVault\\PWVault\\src\\main\\resources\\text\\pwds.txt");
             userReader = new BufferedReader(pwdfr);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TextManager.class.getName()).log(Level.SEVERE, null, ex);
