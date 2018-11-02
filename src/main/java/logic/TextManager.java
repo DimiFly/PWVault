@@ -26,12 +26,8 @@ public class TextManager {
     FileWriter pwdWriter;
 
     public TextManager() {
-        try {
-            userWriter = new FileWriter("E:\\PWVault\\PWVault\\src\\main\\resources\\text\\user.txt");
-            pwdWriter = new FileWriter("E:\\PWVault\\PWVault\\src\\main\\resources\\text\\pwds.txt");
-        } catch (IOException ex) {
-            Logger.getLogger(TextManager.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        ArrayList<String> contentUser = new ArrayList<String>();
+        ArrayList<String> contentPwds = new ArrayList<String>();
 
         FileReader userfr = null;
         FileReader pwdfr = null;
@@ -39,8 +35,37 @@ public class TextManager {
             userfr = new FileReader("E:\\PWVault\\PWVault\\src\\main\\resources\\text\\user.txt");
             userReader = new BufferedReader(userfr);
             pwdfr = new FileReader("E:\\PWVault\\PWVault\\src\\main\\resources\\text\\pwds.txt");
-            userReader = new BufferedReader(pwdfr);
+            pwdReader = new BufferedReader(pwdfr);
         } catch (FileNotFoundException ex) {
+            Logger.getLogger(TextManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        String line = "";
+        try {
+            while ((line = userReader.readLine()) != null) {
+                contentUser.add(line);
+            }
+            line = "";
+            while ((line = pwdReader.readLine()) != null) {
+                contentPwds.add(line);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(TextManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        try {
+            userWriter = new FileWriter("E:\\PWVault\\PWVault\\src\\main\\resources\\text\\user.txt");
+            for (String user : contentUser) {
+                userWriter.write(user+"\n");
+            }
+            userWriter.flush();
+            contentUser = null;
+            pwdWriter = new FileWriter("E:\\PWVault\\PWVault\\src\\main\\resources\\text\\pwds.txt");
+            for (String pwd : contentPwds) {
+                pwdWriter.write(pwd+"\n");
+            }
+            pwdWriter.flush();
+            contentPwds = null;
+        } catch (IOException ex) {
             Logger.getLogger(TextManager.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -116,7 +141,7 @@ public class TextManager {
 
     public void addCategoryToUser(String username, String category, String pwd) {
         try {
-            pwdWriter.write(username+"|"+category+"|"+pwd);
+            pwdWriter.write(username + "|" + category + "|" + pwd);
             pwdWriter.flush();
         } catch (IOException ex) {
             Logger.getLogger(TextManager.class.getName()).log(Level.SEVERE, null, ex);

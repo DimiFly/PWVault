@@ -58,12 +58,12 @@
             <Insets left="60.0" right="60.0" />
          </GridPane.margin>
       </Label>
-      <Button id="addButton" mnemonicParsing="false" text="+" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+      <Button id="addButton" mnemonicParsing="false" onAction="#handleButtonAdd" text="+" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <font>
             <Font name="DejaVu Sans Bold" size="30.0" />
          </font>
       </Button>
-      <Button id="quit" mnemonicParsing="false" text="Quit" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+      <Button id="quit" mnemonicParsing="false" onAction="#handleButtonQuit" text="Quit" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
          <font>
             <Font name="DejaVu Sans Bold" size="30.0" />
          </font>

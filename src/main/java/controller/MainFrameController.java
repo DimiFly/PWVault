@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 import logic.PWVaultModel;
+import window.manager.WindowManager;
 
 /**
  *
@@ -26,13 +27,14 @@ public class MainFrameController implements Initializable {
     private TextField username, password;
 
     @FXML
-    private void handleButtonCalculate(ActionEvent event) {
-        //TODO
+    private void handleButtonQuit(ActionEvent event) {
+        System.exit(0);
     }
 
     @FXML
     private void handleButtonAdd(ActionEvent event){
-        //TODO
+        WindowManager.stop("MainFrameStage");
+        WindowManager.start("AddPwdStage");
     }
 
     @Override

@@ -11,7 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import logic.PWVaultModel;
-
+import window.manager.WindowManager;
 
 /**
  *
@@ -22,8 +22,10 @@ public class AddPwdController implements Initializable {
     private PWVaultModel model;
 
     @FXML
-    private void handleButtonCalculate(ActionEvent event) {
-        //TODO
+    private void handleButtonBack(ActionEvent event) {
+        WindowManager.start("MainFrameStage");
+        WindowManager.stop("AddPwdStage");
+        
     }
 
     @FXML

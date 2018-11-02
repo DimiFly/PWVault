@@ -30,12 +30,13 @@ public class LoginController implements Initializable {
     private void handleButtonLogin(ActionEvent event) {
         System.out.println("logging in: "+username.getText());
         model.loginUser(username.getText(), password.getText());
+        WindowManager.stop("LoginStage");
+        WindowManager.start("MainFrameStage");        
     }
 
     @FXML
     private void handleButtonAdd(ActionEvent event){
-        WindowManager.stop("LoginStage");
-        WindowManager.start("AddPwdStage");       
+        
     }
 
     @Override
