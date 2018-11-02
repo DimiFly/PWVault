@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import logic.PWVaultModel;
+import window.manager.WindowManager;
 
 /**
  *
@@ -26,18 +27,20 @@ public class LoginController implements Initializable {
 
 
     @FXML
-    private void handleButtonCalculate(ActionEvent event) {
-        //TODO
+    private void handleButtonLogin(ActionEvent event) {
+        System.out.println("logging in: "+username.getText());
+        model.loginUser(username.getText(), password.getText());
     }
 
     @FXML
     private void handleButtonAdd(ActionEvent event){
-        //TODO
+        WindowManager.stop("LoginStage");
+        WindowManager.start("AddPwdStage");       
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        model = new PWVaultModel();
     }
 
 }

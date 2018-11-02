@@ -27,8 +27,8 @@ public class TextManager {
 
     public TextManager() {
         try {
-            userWriter = new FileWriter("/src/main/resources/text/user.txt");
-            pwdWriter = new FileWriter("/src/main/resources/text/pwds.txt");
+            userWriter = new FileWriter("../../src/main/resources/text/user.txt");
+            pwdWriter = new FileWriter("../../src/main/resources/text/pwds.txt");
         } catch (IOException ex) {
             Logger.getLogger(TextManager.class.getName()).log(Level.SEVERE, null, ex);
         }

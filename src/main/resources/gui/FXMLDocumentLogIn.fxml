@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="350.0" stylesheets="@../stylesheets/loginStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFrameController">
+<GridPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="350.0" stylesheets="@../stylesheets/loginStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="333.3333333333" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="333.3333333333" />
@@ -64,7 +64,7 @@
             <Insets left="50.0" right="50.0" />
          </GridPane.margin>
       </TextField>
-      <Button id="loginButton" mnemonicParsing="false" onAction="#handleButtonCalculate" stylesheets="@../stylesheets/loginStyle.css" text="Log In" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+      <Button id="loginButton" mnemonicParsing="false" onAction="#handleButtonLogin" stylesheets="@../stylesheets/loginStyle.css" text="Log In" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5">
          <font>
             <Font name="DejaVu Sans Bold" size="20.0" />
          </font>
