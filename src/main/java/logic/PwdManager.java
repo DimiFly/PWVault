@@ -20,9 +20,9 @@ import javax.crypto.spec.SecretKeySpec;
  *
  * @author 5im16nivanderheide
  */
-public class PwdConverter {
+public class PwdManager {
 
-    public PwdConverter() {
+    public PwdManager() {
 
     }
 
@@ -62,15 +62,15 @@ public class PwdConverter {
             byte[] encryptedData = c.doFinal(dataToSend);
             return new String(encryptedData);
         } catch (NoSuchAlgorithmException ex) {
-            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PwdManager.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoSuchPaddingException ex) {
-            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PwdManager.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InvalidKeyException ex) {
-            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PwdManager.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalBlockSizeException ex) {
-            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PwdManager.class.getName()).log(Level.SEVERE, null, ex);
         } catch (BadPaddingException ex) {
-            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PwdManager.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }
@@ -86,15 +86,15 @@ public class PwdConverter {
         byte[] data = c.doFinal(encryptedData);
         return new String(data);
         } catch (NoSuchAlgorithmException ex) {
-            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PwdManager.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoSuchPaddingException ex) {
-            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PwdManager.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InvalidKeyException ex) {
-            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PwdManager.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalBlockSizeException ex) {
-            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PwdManager.class.getName()).log(Level.SEVERE, null, ex);
         } catch (BadPaddingException ex) {
-            Logger.getLogger(PwdConverter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PwdManager.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }

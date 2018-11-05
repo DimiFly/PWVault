@@ -1,1 +1,1 @@
-user|category|pwd
+|user|category|pwd|||||

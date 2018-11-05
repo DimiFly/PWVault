@@ -11,7 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import logic.PWVaultModel;
-import window.manager.WindowManager;
+import logic.WindowManager;
 
 /**
  *

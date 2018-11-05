@@ -8,12 +8,13 @@ package controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.scene.control.Label;
 import logic.PWVaultModel;
-import window.manager.WindowManager;
+import logic.UserManager;
+import logic.WindowManager;
 
 /**
  *
@@ -24,7 +25,7 @@ public class MainFrameController implements Initializable {
     private PWVaultModel model;
 
     @FXML
-    private TextField username, password;
+    private Label output;
 
     @FXML
     private void handleButtonQuit(ActionEvent event) {
@@ -35,6 +36,13 @@ public class MainFrameController implements Initializable {
     private void handleButtonAdd(ActionEvent event){
         WindowManager.stop("MainFrameStage");
         WindowManager.start("AddPwdStage");
+    }
+    
+    @FXML
+    private void handleButtonLogout(ActionEvent event){
+        UserManager.logout();
+        WindowManager.stop("MainFrameStage");
+        WindowManager.start("LoginStage");      
     }
 
     @Override

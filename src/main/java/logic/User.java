@@ -10,11 +10,17 @@ package logic;
  * @author 5im16nivanderheide
  */
 public class User {
-    
+
     private String username;
-    
-    public User(){
-        
+    private String pwd;
+
+    public User() {
+
+    }
+
+    public User(String username, String pwd) {
+        this.username = username;
+        this.pwd = pwd;
     }
 
     public String getUsername() {
@@ -24,5 +30,13 @@ public class User {
     public void setUsername(String username) {
         this.username = username;
     }
-    
+
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
+
 }

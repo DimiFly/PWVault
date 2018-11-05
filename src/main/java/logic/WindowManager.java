@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package window.manager;
+package logic;
 
 import java.util.HashMap;
 import javafx.stage.Stage;
