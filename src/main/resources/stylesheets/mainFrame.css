@@ -17,3 +17,48 @@
     -fx-background-color: rgba(0,0,0,0.4);
     -fx-border-color: rgba(0,0,0,0.5);
 }
+
+#category{
+    -fx-background-radius: 30px;
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-radius: 30px;
+    -fx-border-width: 5px;
+    -fx-mark-color: white;
+}
+#category:hover{
+    -fx-background-color: rgba(0,0,0,0.4);
+    -fx-border-color: rgba(0,0,0,0.5);
+}
+
+#logOut{
+    -fx-background-radius: 30px;
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-radius: 30px;
+    -fx-border-width: 5px;
+}
+#logOut:hover{
+    -fx-background-color: rgba(0,0,0,0.4);
+    -fx-border-color: rgba(0,0,0,0.5);
+}
+
+#quit{
+    -fx-background-radius: 30px;
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-radius: 30px;
+    -fx-border-width: 5px;
+}
+#quit:hover{
+    -fx-background-color: rgba(0,0,0,0.4);
+    -fx-border-color: rgba(0,0,0,0.5);
+}
+
+#output{
+    -fx-background-radius: 30px;
+    -fx-background-color: white;
+    -fx-border-color: white;
+    -fx-border-radius: 30px;
+    -fx-border-width: 5px;
+}

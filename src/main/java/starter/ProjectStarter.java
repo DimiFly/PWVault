@@ -35,8 +35,8 @@ public class ProjectStarter extends Application {
         Parent mainFrameRoot = FXMLLoader.load(getClass().getClassLoader().getResource("gui/FXMLDocumentMainFrame.fxml"));
         Scene mainFrameScene = new Scene(mainFrameRoot);
         mainFrameStage.setScene(mainFrameScene);
-        mainFrameStage.setMaxHeight(500);
-        mainFrameStage.setMinHeight(500);
+        mainFrameStage.setMaxHeight(400);
+        mainFrameStage.setMinHeight(400);
         mainFrameStage.setMaxWidth(800);
         mainFrameStage.setMinWidth(800);        
         WindowManager.putStage("MainFrameStage", mainFrameStage);
