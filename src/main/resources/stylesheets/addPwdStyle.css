@@ -5,7 +5,7 @@
     -fx-background-position: center center;
 }
 
-#addButton{
+#addPw{
     -fx-background-radius: 30px;
     -fx-background-color: transparent;
     -fx-border-color: white;
@@ -14,12 +14,12 @@
     -fx-pref-width: 500px;
 }
 
-#addButton:hover{
+#addPw:hover{
     -fx-background-color: rgba(0,0,0,0.4);
     -fx-border-color: rgba(0,0,0,0.5);
 }
 
-#loginButton{
+#back{
     -fx-background-radius: 30px;
     -fx-background-color: transparent;
     -fx-border-color: white;
@@ -27,33 +27,26 @@
     -fx-border-width: 5px;
     -fx-pref-width: 160px;
 }
-#loginButton:hover{
+#back:hover{
     -fx-background-color: rgba(0,0,0,0.4);
     -fx-border-color: rgba(0,0,0,0.5);
 }
 
-#username{
+#category{
     -fx-background-color: rgba(255,255,255,1);
     -fx-background-radius: 30px;
-    -fx-border-width: 5px;
-    -fx-border-radius: 30px;
-    -fx-border-color: black;
 }
 
-#username:hover{
+#category:hover{
     -fx-background-color: rgba(0,0,0,0.4);
     -fx-border-color: rgba(0,0,0,0.5);
     -fx-border-width: 5px;
     -fx-border-radius: 30px;
-    -fx-text-fill: white;
 }
 
 #password{
     -fx-background-color: rgba(255,255,255,1);
     -fx-background-radius: 30px;
-    -fx-border-width: 5px;
-    -fx-border-radius: 30px;
-    -fx-border-color: black;
 }
 
 #password:hover{
@@ -61,6 +54,16 @@
     -fx-border-color: rgba(0,0,0,0.5);
     -fx-border-width: 5px;
     -fx-border-radius: 30px;
-    -fx-text-fill: white;
 }
 
+#repeat{
+    -fx-background-color: rgba(255,255,255,1);
+    -fx-background-radius: 30px;
+}
+
+#repeat:hover{
+    -fx-background-color: rgba(0,0,0,0.4);
+    -fx-border-color: rgba(0,0,0,0.5);
+    -fx-border-width: 5px;
+    -fx-border-radius: 30px;
+}

@@ -43,7 +43,7 @@ public class PWVaultModel {
     
     public void addUser(String username, String pwd) {
         if (!textManager.userExists(username)) {
-            textManager.addUser(username);
+            textManager.addUser(username, pwd);
             UserManager.setUser(username, pwd);
             WindowManager.stop("LoginStage");
             WindowManager.start("MainFrameStage");
@@ -61,8 +61,8 @@ public class PWVaultModel {
     
     /////////////////////////////////// Maneframe
     
-    public String getPwdOfCategory(String username, String category){
-        return textManager.getPwdOfCathegoryOfUser(UserManager.getUser().getUsername(), category);
+    public String getPwdOfCategory(String username, String category, String key){
+        return (String) textManager.getPwdOfCategoryOfUser(UserManager.getUser().getUsername(), category, key);
     }
     
     public ArrayList<String> getCategorys(){

@@ -12,8 +12,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import logic.PWVaultModel;
-import logic.TextManager;
-import logic.WindowManager;
 
 /**
  *
@@ -22,32 +20,24 @@ import logic.WindowManager;
 public class LoginController implements Initializable {
 
     private PWVaultModel model;
-
+    
     @FXML
     private TextField username, password;
 
+
     @FXML
     private void handleButtonLogin(ActionEvent event) {
-        System.out.println("logging in: " + username.getText());
-
-        if (model.loginUser(username.getText(), password.getText())) {
-            System.out.println("logged in: " + username.getText());
-            WindowManager.stop("LoginStage");
-            WindowManager.start("MainFrameStage");
-        }else{
-            System.out.println(username.getText() + " doesnt exist");
-        }
-
+        //TODO
     }
 
     @FXML
-    private void handleButtonAdd(ActionEvent event) {
-        model.addUser(username.getText(), password.getText());
+    private void handleButtonAdd(ActionEvent event){
+        //TODO
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        model = new PWVaultModel();
+        // TODO
     }
 
 }
