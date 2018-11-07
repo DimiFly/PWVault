@@ -65,7 +65,7 @@ public class PWVaultModel {
         return (String) textManager.getPwdOfCategoryOfUser(UserManager.getUser().getUsername(), category, key);
     }
     
-    public ArrayList<String> getCategorys(){
+    public ArrayList<String> getCategories(){
         return textManager.getCategorysOfUser(UserManager.getUser().getUsername());
     }
 

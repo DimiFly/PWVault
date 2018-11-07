@@ -45,10 +45,10 @@ public class ProjectStarter extends Application {
         Parent addPwdRoot = FXMLLoader.load(getClass().getClassLoader().getResource("gui/FXMLDocumentAddPwd.fxml"));
         Scene addPwdeScene = new Scene(addPwdRoot);
         addPwdStage.setScene(addPwdeScene);
-        addPwdStage.setMaxHeight(354);
-        addPwdStage.setMinHeight(354);
-        addPwdStage.setMaxWidth(369);
-        addPwdStage.setMinWidth(369);        
+        addPwdStage.setMaxHeight(500);
+        addPwdStage.setMinHeight(500);
+        addPwdStage.setMaxWidth(600);
+        addPwdStage.setMinWidth(600);
         WindowManager.putStage("AddPwdStage", addPwdStage);
                 
         WindowManager.start("LoginStage");

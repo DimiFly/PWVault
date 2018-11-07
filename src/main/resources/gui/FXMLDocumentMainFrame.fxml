@@ -27,7 +27,7 @@
             <Font name="DejaVu Sans Bold" size="50.0" />
          </font>
       </Label>
-      <MenuButton id="category" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="30.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="54.0" prefWidth="177.0" text="Category" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <MenuButton id="category" fx:id="menu" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="30.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="54.0" prefWidth="177.0" text="Category" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
         <items>
           <MenuItem mnemonicParsing="false" text="Action 1" />
           <MenuItem mnemonicParsing="false" text="Action 2" />

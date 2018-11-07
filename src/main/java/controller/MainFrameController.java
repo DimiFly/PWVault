@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
 import logic.PWVaultModel;
 import logic.UserManager;
 import logic.WindowManager;
@@ -28,9 +29,19 @@ public class MainFrameController implements Initializable {
     private Label output;
 
     @FXML
+    private MenuButton menu;
+
+    public void fillMenu(){
+        PWVaultModel model = new PWVaultModel();
+        model.getCategories();
+    }
+
+    @FXML
     private void handleButtonQuit(ActionEvent event) {
         System.exit(0);
     }
+
+
 
     @FXML
     private void handleButtonAdd(ActionEvent event){

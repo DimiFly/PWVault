@@ -11,7 +11,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -29,18 +28,18 @@ public class TextManager {
     public TextManager() {
         initReaderWriter();
     }
-    
+
     public BufferedReader getNewReader() throws FileNotFoundException{
         FileReader userfr = new FileReader("./src/main/resources/text/user.txt");
         return new BufferedReader(userfr);
     }
-    
+
     public void initReaderWriter(){
         String[] contentUser = null;
         String[] contentPwds = null;
 
         FileReader userfr;
-        FileReader pwdfr;        
+        FileReader pwdfr;
 
         String line = "";
         try {
@@ -50,7 +49,6 @@ public class TextManager {
             pwdReader = new BufferedReader(pwdfr);
             while ((line = userReader.readLine()) != null) {
                 contentUser = line.split("\\|");
-                System.out.println(Arrays.toString(contentUser));
             }
             userReader.close();
             line = "";
@@ -126,7 +124,7 @@ public class TextManager {
         initReaderWriter();
         try {
             BufferedReader reader = getNewReader();
-            
+
             userWriter.write(username + "|" + pwd);
             userWriter.flush();
         } catch (IOException ex) {
