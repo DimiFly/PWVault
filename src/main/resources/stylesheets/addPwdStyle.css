@@ -6,35 +6,38 @@
 }
 
 #addPw{
-    -fx-background-radius: 30px;
+    -fx-background-radius: 50px;
     -fx-background-color: transparent;
     -fx-border-color: white;
-    -fx-border-radius: 30px;
+    -fx-border-radius: 50px;
     -fx-border-width: 5px;
-    -fx-pref-width: 500px;
 }
 
 #addPw:hover{
     -fx-background-color: rgba(0,0,0,0.4);
     -fx-border-color: rgba(0,0,0,0.5);
+
 }
 
 #back{
-    -fx-background-radius: 30px;
+    -fx-background-radius: 50px;
     -fx-background-color: transparent;
     -fx-border-color: white;
-    -fx-border-radius: 30px;
+    -fx-border-radius: 50px;
     -fx-border-width: 5px;
-    -fx-pref-width: 160px;
 }
 #back:hover{
     -fx-background-color: rgba(0,0,0,0.4);
     -fx-border-color: rgba(0,0,0,0.5);
+    -fx-border-radius: 50px;
 }
 
 #category{
     -fx-background-color: rgba(255,255,255,1);
     -fx-background-radius: 30px;
+    -fx-border-width: 5px;
+    -fx-border-color: black;
+    -fx-border-radius: 30px;
 }
 
 #category:hover{
@@ -42,11 +45,15 @@
     -fx-border-color: rgba(0,0,0,0.5);
     -fx-border-width: 5px;
     -fx-border-radius: 30px;
+    -fx-text-fill: white;
 }
 
 #password{
     -fx-background-color: rgba(255,255,255,1);
     -fx-background-radius: 30px;
+    -fx-border-width: 5px;
+    -fx-border-color: black;
+    -fx-border-radius: 30px;
 }
 
 #password:hover{
@@ -54,11 +61,15 @@
     -fx-border-color: rgba(0,0,0,0.5);
     -fx-border-width: 5px;
     -fx-border-radius: 30px;
+    -fx-text-fill: white;
 }
 
 #repeat{
     -fx-background-color: rgba(255,255,255,1);
     -fx-background-radius: 30px;
+    -fx-border-width: 5px;
+    -fx-border-color: black;
+    -fx-border-radius: 30px;
 }
 
 #repeat:hover{
@@ -66,4 +77,5 @@
     -fx-border-color: rgba(0,0,0,0.5);
     -fx-border-width: 5px;
     -fx-border-radius: 30px;
+    -fx-text-fill: white;
 }

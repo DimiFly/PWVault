@@ -8,80 +8,87 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<GridPane id="background" prefHeight="350.0" prefWidth="450.0" stylesheets="@../stylesheets/addPwdStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPwdController">
+<GridPane id="background" prefHeight="500.0" prefWidth="600.0" stylesheets="@../stylesheets/addPwdStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPwdController">
    <columnConstraints>
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="187.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="130.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="133.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="398.0" minWidth="10.0" prefWidth="315.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="285.0" />
    </columnConstraints>
    <rowConstraints>
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
-        <Label fx:id="label" minHeight="16" minWidth="69" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        <Label fx:id="label" minHeight="16" minWidth="69" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <TextField id="password" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
          <GridPane.margin>
-            <Insets left="10.0" right="50.0" />
+            <Insets left="10.0" right="20.0" />
          </GridPane.margin>
+         <font>
+            <Font size="15.0" />
+         </font>
       </TextField>
       <TextField id="repeat" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
          <GridPane.margin>
-            <Insets left="10.0" right="50.0" />
+            <Insets left="10.0" right="20.0" />
          </GridPane.margin>
-      </TextField>
-      <Label prefHeight="36.0" prefWidth="104.0" text="Category" textFill="WHITE" GridPane.rowIndex="1">
-         <font>
-            <Font size="20.0" />
-         </font>
-         <GridPane.margin>
-            <Insets left="30.0" />
-         </GridPane.margin>
-      </Label>
-      <Label prefHeight="36.0" prefWidth="106.0" text="Password" textFill="WHITE" GridPane.rowIndex="2">
-         <font>
-            <Font size="20.0" />
-         </font>
-         <GridPane.margin>
-            <Insets left="30.0" />
-         </GridPane.margin>
-      </Label>
-      <Label prefHeight="36.0" prefWidth="168.0" text="Repeat Password" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3">
-         <font>
-            <Font size="20.0" />
-         </font>
-         <GridPane.margin>
-            <Insets left="30.0" />
-         </GridPane.margin>
-      </Label>
-      <TextField id="category" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
-         <GridPane.margin>
-            <Insets left="10.0" right="50.0" />
-         </GridPane.margin>
-      </TextField>
-      <Button id="addPw" mnemonicParsing="false" prefHeight="31.0" prefWidth="120.0" text="Add password" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
          <font>
             <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label prefHeight="38.0" prefWidth="259.0" text="Category" textFill="WHITE" GridPane.rowIndex="1">
+         <font>
+            <Font name="DejaVu Sans Bold" size="30.0" />
          </font>
          <GridPane.margin>
             <Insets left="10.0" />
          </GridPane.margin>
-      </Button>
-      <Label prefHeight="58.0" prefWidth="283.0" text="Add a password" textFill="WHITE" GridPane.columnSpan="3" GridPane.halignment="CENTER">
-         <font>
-            <Font size="40.0" />
-         </font>
       </Label>
-      <Button id="back" mnemonicParsing="false" onAction="#handleButtonBack" text="Back" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+      <Label prefHeight="36.0" prefWidth="189.0" text="Password" textFill="WHITE" GridPane.rowIndex="2">
+         <font>
+            <Font name="DejaVu Sans Bold" size="30.0" />
+         </font>
          <GridPane.margin>
-            <Insets right="50.0" />
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Label prefHeight="36.0" prefWidth="305.0" text="Repeat Password" textFill="WHITE" GridPane.rowIndex="3">
+         <font>
+            <Font name="DejaVu Sans Bold" size="30.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField id="category" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="10.0" right="20.0" />
          </GridPane.margin>
          <font>
             <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button id="addPw" mnemonicParsing="false" prefHeight="95.0" prefWidth="95.0" text="Add" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font name="DejaVu Sans Bold" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="20.0" left="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Label prefHeight="68.0" prefWidth="450.0" text="Add Password" textFill="WHITE" GridPane.columnSpan="3" GridPane.halignment="CENTER">
+         <font>
+            <Font name="DejaVu Sans Bold" size="50.0" />
+         </font>
+      </Label>
+      <Button id="back" mnemonicParsing="false" onAction="#handleButtonBack" prefHeight="95.0" prefWidth="95.0" text="Back" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="10.0" right="20.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="DejaVu Sans Bold" size="20.0" />
          </font>
       </Button>
    </children>

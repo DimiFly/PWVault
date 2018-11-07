@@ -27,7 +27,7 @@
             <Font name="DejaVu Sans Bold" size="50.0" />
          </font>
       </Label>
-      <MenuButton id="category" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="30.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="54.0" prefWidth="150.0" text="Category" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <MenuButton id="category" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="30.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="54.0" prefWidth="177.0" text="Category" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
         <items>
           <MenuItem mnemonicParsing="false" text="Action 1" />
           <MenuItem mnemonicParsing="false" text="Action 2" />
@@ -54,7 +54,7 @@
       </Button>
       <Button id="quit" mnemonicParsing="false" onAction="#handleButtonQuit" prefHeight="54.0" prefWidth="106.0" text="Quit" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
          <font>
-            <Font size="20.0" />
+            <Font name="DejaVu Sans Bold" size="20.0" />
          </font>
          <GridPane.margin>
             <Insets right="60.0" />
@@ -62,7 +62,7 @@
       </Button>
       <Button id="logOut" mnemonicParsing="false" onAction="#handleButtonLogout" prefHeight="54.0" prefWidth="150.0" text="Log Out" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3">
          <font>
-            <Font size="20.0" />
+            <Font name="DejaVu Sans Bold" size="20.0" />
          </font>
       </Button>
    </children>
